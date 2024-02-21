@@ -15,11 +15,9 @@ spec:
     spec:
       containers:
         - name: api
-          image: servicios-cloud-karlo:1
+          image: localhost:5000/servicios-cloud-karlo:1
           ports:
-            - containerPort: 8080
+            - containerPort: 3000
           env:
-            - name: MYSQL_PASSWORD
+            - name: MYSQL_ROOT_PASSWORD
               value: mysql-password
-      imagePullSecrets:
-        - name: your-image-pull-secret
